@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+
+    <style>
+      body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #f3eded;
+  text-align: center;
+}
+
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"],.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+
+
+.box2 input[type = "submit"],.box2 input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 150px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box2 input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+
+      </style>
+    <meta charset="utf-8">
+    <title>َAnimated Login Form</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  </head>
+  <body>
+
+<form class="box" action="/log" method="POST">
+  
+
+  <h1 style="color: brown"> Analyse </h1>
+  M / Ms  {{utilisateur.Login}} 
+  <h1 style="color: burlywood">HEMATOLOGIE ( Sang Total )</h1>				
+			</div>
+
+<br> {{utilisateur.Fonction}} </br>
+
+<h2>Id: {{utilisateur.Id}} </h2></br>
+Gendre: {{utilisateur.Gender}} </br>
+Age: {{utilisateur.Age}}</br>
+<h1 style="color: burlywood">Numeration Formule SANGUINE</h1>
+
+Hématies  {{utilisateur.Yellow_fingers}} T/I</br>
+Hémoglobine {{utilisateur.Anxiety}} g/100 ml</br>
+Hématocrite {{utilisateur.Fatigue}} % </br>
+Lymphocytes  {{utilisateur.Allergy}} </br>
+TCMH {{utilisateur.Respiration}} pg</br>
+Leucocytes {{utilisateur.Toux}}  G/I</br>
+CCMH {{utilisateur.Smoking}} </br>
+Poly Neutrophiles {{utilisateur.Chronic_disease}} % </br>
+Lymphocytes {{utilisateur.Essouflement}}  %</br>
+<h1 style="color: burlywood"> Biochimie Sanguine</h1>
+Creatininie {{utilisateur.Avaler}} mg/i </br>
+Potassium K {{utilisateur.Essouflement}}  </br>
+<h1 style="color: burlywood">Hormonologie Sanguine</h1>
+Monocytes {{utilisateur.Douleur_thoracique}} % </br>
+
+VGM {{utilisateur.Cancer_des_poumons}} fl </br>
+
+
+
+  
+</form>
+
+
+<form class="box2" action="/out" method="POST">
+  <input type="submit" name="retour2" value="logout"/>
+</form>
+
+
+
+
+
+
+
+  </body>
+</html>

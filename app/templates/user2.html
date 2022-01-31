@@ -1,0 +1,68 @@
+<html>
+<head>
+
+    <style>
+        h1{
+   font-size: 100px;
+   color: azure;
+ }
+       body{
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   background: #34495e;
+ }
+
+ .b1 input[type = "submit"]{
+ border:0;
+ background: none;
+ display: block;
+ margin: 20px auto;
+ text-align: center;
+ border: 2px solid #2ecc71;
+ padding: 14px 40px;
+ outline: none;
+ color: white;
+ border-radius: 24px;
+ transition: 0.25s;
+ cursor: pointer;
+}
+.b1 input[type = "submit"]:hover{
+ background: #2ecc71;
+}
+.hh{
+  color: azure;
+
+}
+ </style>
+<title> 
+</title>
+</head>
+<body>
+ <div class='hh'> 
+<h1> Bienvenue dans votre Profil {{utilisateur.login}}</h1> 
+<h3>Nom : {{utilisateur.nom}}</h3>
+<h3>Prenom : {{utilisateur.prenom}}</h3>
+<h3>Age : {{utilisateur.age}}</h3>
+<h3>Gender : {{utilisateur.gender}}</h3>
+<h3>Nationalité : {{utilisateur.nationalité}}</h3>
+<h3>Adresse : {{utilisateur.adresse}}</h3>
+<h3>identité : {{utilisateur.identité}}</h3>
+<h3>Carte vitale : {{utilisateur.vitale}}</h3>
+<h3>Phone : {{utilisateur.Phone}}</h3>
+</div>
+
+  <form class="b1" method="POST" action="/form_pat">
+    <input type="submit" name="formulaire" value="Formulaire" />
+    </form>
+    <form class="b1" method="POST" action="/an">
+      <input type="submit" name="logout" value="Analyses" />
+      </form>
+  <form class="b1" method="POST" action="/out">
+    <input type="submit" name="logout" value="Logout" />
+    </form>
+
+    
+
+</body>
+</html>

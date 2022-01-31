@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+
+    <style>
+      body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+.box{
+  width: 600px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+}
+
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"],.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+
+
+.box2 input[type = "submit"],.box2 input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  float:left;
+   width:35%;
+}
+.box2 input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+#gauche {
+   float:left;
+   width:35%;
+}
+#milieu {
+  float:right;
+   width:40%;
+}
+      </style>
+    <meta charset="utf-8">
+    <title>َAnimated Login Form</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  </head>
+  <body>
+
+<form class="box" action="/log_pat" method="POST">
+  <div id="gauche">
+  <input type="text" name="login" placeholder="Username">
+  <input type="password" name="mdp" placeholder="Password">
+  <input type="text" name="nom" placeholder="Nom">
+  <input type="text" name="prenom" placeholder="Prenom">
+  <input type="text" name="age" placeholder="Age">
+
+</div>
+<div id="milieu">
+  <input type="text" name="gender" placeholder="Gender">
+  <input type="text" name="nationalité" placeholder="Nationalité">
+  <input type="text" name="Adresse" placeholder="Adresse">
+  <input type="text" name="identité" placeholder="Num Identité">
+  <input type="text" name="vitale" placeholder="Carte Vitale">
+  <input type="text" name="Phone" placeholder="Numero telephone">
+  <input type="submit" name="connexion" value="Login">
+  
+</form>
+</div>
+
+<div id="gauche">
+  <font style="color: beige;"> <h1>Login Patient </h1></font>
+
+<form class="box2" action="/ps1" method="POST">
+  <input type="submit" name="inscrii" value="Medecin"/>
+</form>
+<form class="box2" action="/ins_patt" method="POST">
+  <input type="submit" name="inscri_pat" value="Register"/>
+</form>
+</div>
+
+
+
+
+
+  </body>
+</html>

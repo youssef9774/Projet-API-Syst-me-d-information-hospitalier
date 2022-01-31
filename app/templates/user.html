@@ -1,0 +1,63 @@
+<html>
+<head>
+
+    <style>
+        h1{
+   font-size: 100px;
+   color: azure;
+ }
+       body{
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   background: #34495e;
+ }
+
+ .b1 input[type = "submit"]{
+ border:0;
+ background: none;
+ display: block;
+ margin: 20px auto;
+ text-align: center;
+ border: 2px solid #2ecc71;
+ padding: 14px 40px;
+ outline: none;
+ color: white;
+ border-radius: 24px;
+ transition: 0.25s;
+ cursor: pointer;
+}
+.b1 input[type = "submit"]:hover{
+ background: #2ecc71;
+}
+ </style>
+<title> 
+</title>
+</head>
+<body>
+    
+<h1> Bienvenue dans votre Profil Docteur {{utilisateur.login}}</h1> 
+<h1></h1>
+
+<form class="b1" method="POST" action="/ins_pat2">
+  <input type="submit" name="nv_pat" value="Nouveau Patient" />
+  </form>
+<form class="b1" method="POST" action="/show">
+  <input type="submit" name="show" value="show" />
+  </form>
+  
+    <form class="b1" method="POST" action="/analyse">
+      <input type="submit" name="analyse" value="Analyse Patient" />
+      </form>
+      <form class="b1" method="POST" action="/cor">
+        <input type="submit" name="analyse" value="cordonnées_Patient" />
+        </form>
+        <form class="b1" method="POST" action="/cor1">
+          <input type="submit" name="analyse" value="convert_me" />
+          </form>
+      <form class="b1" method="POST" action="/out">
+        <input type="submit" name="logout" value="logout" />
+        </form>
+        
+</body>
+</html>

@@ -1,0 +1,145 @@
+<html>
+<head>
+<title> Connexion réussi
+</title>
+</head>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body>
+<Center>
+
+<style>
+body {
+  background-image: url('https://www.senioractu.com/photo/art/grande/31836724-29879613.jpg?v=1553150094');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.textbox{​​
+border-bottom: 1px solid #9cc9c8;
+text-align: center;
+background-size: cover;
+color: black;
+}​​
+
+body {
+		font-family: 'Varela Round', sans-serif;
+	}
+	.modal-login {
+		color: #0f056b;
+		width: 350px;
+		margin: 30px auto;
+	}
+	.modal-login .modal-content {
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+	}
+	.modal-login .modal-header {
+		border-bottom: none;
+		position: relative;
+		justify-content: center;
+	}
+	.modal-login h4 {
+		text-align: center;
+		font-size: 26px;
+	}
+	.modal-login  .form-group {
+		position: relative;
+	}
+	.modal-login i {
+		position: absolute;
+		left: 13px;
+		top: 11px;
+		font-size: 18px;
+	}
+	.modal-login .form-control {
+		padding-left: 40px;
+	}
+	.modal-login .form-control:focus {
+		border-color: #00ce81;
+	}
+	.modal-login .form-control, .modal-login .btn {
+		min-height: 40px;
+		border-radius: 3px; 
+	}
+	.modal-login .hint-text {
+		text-align: center;
+		padding-top: 10px;
+	}
+	.modal-login .close {
+        position: absolute;
+		top: -5px;
+		right: -5px;
+	}
+	.modal-login .btn {
+		background: #00ce81;
+		border: none;
+		line-height: normal;
+	}
+	.modal-login .btn:hover, .modal-login .btn:focus {
+		background: #00bf78;
+	}
+	.modal-login .modal-footer {
+		background: #ecf0f1;
+		border-color: #dee4e7;
+		text-align: center;
+		margin: 0 -20px -20px;
+		border-radius: 5px;
+		font-size: 13px;
+		justify-content: center;
+	}
+	.modal-login .modal-footer a {
+		color: #999;
+	}
+
+</style>
+</head>
+<body>
+
+<div class="textbox">
+<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">				
+				<h4 class="modal-title"> Authentification réussie!  </h4>
+				Bienvenue dans votre espace {{utilisateur.Fonction}} {{utilisateur.Login}}, vous pouvez y retrouver toutes vos données personnels de santé ainsi que le diagnostic dont nous avons parlé en consultation.
+				
+			</div>
+<br>Légende: No= 1 ; Yes= 2  </br>
+
+<br>Votre fonction: {{utilisateur.Fonction}} </br>
+Votre identifiant: {{utilisateur.Id}} </br>
+Genre: {{utilisateur.Gender}} </br>
+Votre âge: {{utilisateur.Age}}</br>
+Vos doigts ont-ils été jaune ces derniers temps? {{utilisateur.Yellow_fingers}}</br>
+Vous sentiez-vous anxieux ces derniers temps? {{utilisateur.Anxiety}}</br>
+Etes-vous fatigué? {{utilisateur.Fatigue}} </br>
+Avez-vous des allergies? {{utilisateur.Allergy}} </br>
+Avez-vous remarqué une respiration sifflante ces derniers jours? {{utilisateur.Respiration}} </br>
+Buvez-vous de l'alcool? {{utilisateur.ALcool}} </br>
+Avez-vous tousser ces derniers temps? {{utilisateur.Toux}} </br>
+Fumez-vous? {{utilisateur.Smoking}} </br>
+Avez-vous des maladies chroniques? {{utilisateur.Chronic_disease}} </br>
+Ressentez-vous un essouflement? {{utilisateur.Essouflement}} </br>
+Avez-vous des difficultés à avaler des aliments? {{utilisateur.Avaler}} </br>
+Avez-vous une douleur thoracique? {{utilisateur.Douleur_thoracique}} </br>
+Etes-vous atteint d'un cancer des poumons? {{utilisateur.Cancer_des_poumons}} </br>
+
+
+<br> Veuillez contacter votre professionnel de santé si vous percevez une erreur.</br>
+
+<form action="/">
+
+<p><input type="submit" name="submit" value="Déconnexion" /><p>
+
+</form>
+
+</body>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+
+    <style>
+      
+      body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+  
+}
+#gauche {
+   float:left;
+   width:35%;
+}
+#ctr {
+   float:center;
+   width:150%;
+   top: 50%;
+}
+
+#milieu {
+  float:right;
+   width:40%;
+}
+.box{
+  width: 800px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #1f1c1c;
+  text-align: center;
+}
+.box h2{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"],.box input[name = "mdp2"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[name = "mdp2"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+      </style>
+    <meta charset="utf-8">
+    <title>َAnimated Login Form</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  </head>
+  <body>
+
+<form class="box" action="/analyse_patt" method="post">
+  <h1 style="color:rgb(193, 204, 204)"> ANALYSE HEMATOLOGIE</h2>
+  <div id="gauche">
+   
+  <input type="text" name="nom" placeholder="Nom">
+  <input type="text" name="prenom" placeholder="Prenom">
+  <input type="text" name="age" placeholder="Age">
+  <input type="text" name="gender" placeholder="Gender">
+  <input type="text" name="nationalité" placeholder="Nationalité">
+  <input type="text" name="Adresse" placeholder="Adresse">
+  <input type="text" name="identité" placeholder="Num Identité">
+  <input type="text" name="vitale" placeholder="Carte Vitale">
+  <input type="text" name="Phone" placeholder="Numero telephone">
+  </div>
+  <div id="milieu">
+  <input type="text" name="Leucocytes" placeholder="Leucocytes">
+  <input type="text" name="Hematies" placeholder="Hématies">
+  <input type="text" name="Hemoglobine" placeholder="Hémoglobine">
+  <input type="text" name="Hematocrite" placeholder="Hématocrite">
+
+  <input type="text" name="Polynucléaires" placeholder="Polynucléaires ">
+  <input type="text" name="neutrophiles" placeholder="neutrophiles">
+  <input type="text" name="eosinophiles" placeholder="éosinophiles">
+  <input type="text" name="Numeration_des_plaquettes" placeholder="Numération des plaquettes">
+  
+  </div>
+  <div id="ctr">
+  <input type="submit" name="analyse" value="valider" /> 
+</div>
+</form>
+
+
+  </body>
+</html>

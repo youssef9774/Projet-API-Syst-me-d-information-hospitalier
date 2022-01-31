@@ -1,0 +1,124 @@
+@app.route('/inscription_medecin', methods=['GET', 'POST']) 
+def inscription_medecin():
+    login = flask.request.form.get('login')
+    mdp = flask.request.form.get('mdp')
+    with sqlite3.connect("pros.db") as con:
+        cur = con.cursor()
+        cur.execute("INSERT INTO pros(login, MDP) VALUES (?,?)", (login,mdp))
+        #con.commit() #fonction qui inscrit ce qu'on a mis dans le curseur
+    con.close() 
+    return "Inscription prise en compte. Veuillez vous connecter."
+
+
+
+
+
+    @app.route('/inscri2_pat', methods=['POST'])
+def inscription_patient():
+  
+    if request.method != 'POST':
+        return
+    login = request.form['login']
+    mdp= request.form['mdp']
+    confirm = request.form['mdp2']
+    infos={"login":login,"mdp":mdp,"mdp2":confirm}
+    if 'user' in session:
+        session['user']=login
+    if confirm!="" and confirm== mdp:
+        with open('patient.json','r') as f1:
+            users=json.load(f1)
+        users[login]={"login": login,"mdp": mdp}
+        
+        with open('patient.json','w') as f2:
+            json.dump(users, f2, indent=4)
+        print("Inscription réalisée avec succès")
+
+        return render_template('login_pat.html', title='Sign in', utilisateur=infos)
+    else:
+        return render_template('erreur.html', title='Erreur')
+
+
+
+
+
+@app.route('/log_pat', methods = ['POST'])  
+def cnx_patient():
+    if request.method == 'POST':
+        login = request.form['login']
+        mdp= request.form['mdp']
+        nom = request.form['nom']
+        prenom= request.form['prenom']
+        age = request.form['age']
+        gender = request.form['gender']
+        nationality = request.form['nationalité']
+        adresse= request.form['Adresse']
+        identity = request.form['identité']
+        vitale= request.form['vitale']
+        phone= request.form['Phone']
+        user={"login":login,"mdp":mdp,"nom": nom,"prenom": prenom,"age": age,"gender": gender,"nationalité": nationality,"Adresse": adresse,"identité": identity,"vitale": vitale,"Phone": phone}
+        data2=db2()
+        if login in data2 and mdp==data2[login]["mdp"]:
+            return render_template('user2.html', utilisateur=user)
+        else:
+            
+            
+            return render_template('erreur.html', title='Erreur', utilisateur=user)
+
+
+
+@app.route('/inscri2_pat', methods=['POST'])
+def inscription_patient_sql():
+  
+    login = flask.request.form.get('login')
+    mdp = flask.request.form.get('mdp')
+    with sqlite3.connect("pros.db") as con:
+        cur = con.cursor()
+        cur.execute("INSERT INTO pros(login, MDP) VALUES (?,?)", (login,mdp))
+        #con.commit() #fonction qui inscrit ce qu'on a mis dans le curseur
+    con.close()
+     
+    return render_template('login_pat.html', title='Sign in')
+
+
+
+
+    @app.route('/inscri2', methods=['POST'])
+def inscription_medecin():
+  
+    if request.method != 'POST':
+        return
+    login = request.form['login']
+    mdp= request.form['mdp']
+    confirm = request.form['mdp2']
+    infos={"login":login,"mdp":mdp,"mdp2":confirm}
+    if 'user' in session:
+        session['user']=login
+    if confirm!="" and confirm== mdp:
+        with open('medecin.json','r') as f1:
+            users=json.load(f1)
+        users[login]={"login": login,"mdp": mdp}
+        
+        with open('medecin.json','w') as f2:
+            json.dump(users, f2, indent=4)
+        print("Inscription réalisée avec succès")
+
+        return render_template('index2.html', title='Sign in', utilisateur=infos)
+    else:
+        return render_template('erreur.html', title='Erreur')
+
+
+
+
+@app.route('/log', methods = ['POST'])  
+def cnx_medecin():
+    if request.method == 'POST':
+        login = request.form['login']
+        mdp= request.form['mdp']
+        user={"login":login,"mdp":mdp}
+        data=db()
+        if login in data and mdp==data[login]["mdp"]:
+            return render_template('user.html', utilisateur=user)
+        else:
+            
+            
+            return render_template('erreur.html', title='Erreur', utilisateur=user)
